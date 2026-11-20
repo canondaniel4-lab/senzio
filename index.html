@@ -224,6 +224,20 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
  .feat{margin-bottom:70px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hl{opacity:1;transform:none}.bar em{width:var(--w)}}
+
+.dl{background:linear-gradient(180deg,var(--bg),var(--bg2) 55%,var(--bg))}
+.dlg{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:10px}
+.dlc{--ac:var(--p)}
+.dlc h3{display:flex;align-items:center;gap:12px}
+.dlc h3 i{font-style:normal;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:#7C5CFF22;font-size:24px}
+.dlm{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.dlm span{font-size:13px;color:var(--p2);background:#7C5CFF18;border:1px solid #7C5CFF40;border-radius:999px;padding:5px 12px}
+.dls{list-style:none;margin:0;padding:0;counter-reset:s}
+.dls li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;color:var(--mut);line-height:1.6;margin-bottom:16px;font-size:16px}
+.dls li::before{content:counter(s);flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,#7C5CFF,#A06BFF)}
+.dls b{color:var(--tx)}
+.dlc .dlnote{margin:22px 0 0;font-size:14px;color:var(--mut);line-height:1.6}
+@media(max-width:900px){.dlg{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -239,6 +253,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#funciones">Funciones</a>
       <a href="#kit">El kit</a>
+      <a href="#descargar">Descargar</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#comprar" class="btn sm">Comprar ahora</a>
     </div>
@@ -441,6 +456,33 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       </form>
       <div class="ok" id="ok">¡Gracias! Esta página es una demostración: el pedido aún no se procesa.</div>
       <p class="note" style="margin:20px 0 0">¿Quieres probarla antes? La app trae un modo Simulado que funciona sin sensores.</p>
+    </div>
+  </div>
+</section>
+
+<section id="descargar" class="dl">
+  <div class="wrap">
+    <div class="eyebrow rv" style="text-align:center">Descarga</div>
+    <h2 class="rv" style="text-align:center;margin-bottom:14px">Descarga la app SENZIO</h2>
+    <p class="sub rv" style="text-align:center;margin:0 auto 40px">Instala la versión 3.3 en tu computador y empieza a ver tu consumo de luz, agua y gas. No necesitas crear una cuenta para descargarla.</p>
+    <div class="dlg">
+      <div class="card dlc rv">
+        <h3><i>⬇️</i>SENZIO v3.3 para tu computador</h3>
+        <div class="dlm"><span>Archivo único .html</span><span>318 KB</span><span>Windows · Mac · Linux</span></div>
+        <ol class="dls">
+          <li><span><b>Descarga el archivo.</b> Pulsa el botón y guarda <b>SENZIO-v3.3.html</b> en tu equipo.</span></li>
+          <li><span><b>Ábrelo con Chrome o Edge.</b> Haz doble clic sobre el archivo y se abre la app.</span></li>
+          <li><span><b>Elige cómo usarla.</b> Prueba el modo Simulado sin sensores, o conecta tu placa ESP32 por Bluetooth.</span></li>
+        </ol>
+        <a class="btn" href="SENZIO-v3.3.html" download="SENZIO-v3.3.html" style="margin-top:8px">⬇ Descargar SENZIO v3.3</a>
+        <p class="dlnote">La primera vez necesita conexión a internet para cargar las fuentes y las gráficas. Para conectar la placa por Bluetooth usa Google Chrome o Microsoft Edge.</p>
+      </div>
+      <div class="card dlc rv" style="--d:.15s;--ac:var(--agua)">
+        <h3><i>🌐</i>¿Prefieres no descargar?</h3>
+        <p>Abre la app directamente en tu navegador, sin instalar nada. Es la misma versión 3.3.</p>
+        <a class="btn ghost" href="app/" target="_blank" rel="noopener">Abrir la app en línea →</a>
+        <p class="dlnote">Sugerencia: si es tu primera vez, activa el modo Simulado para conocer todas las funciones antes de instalar los sensores.</p>
+      </div>
     </div>
   </div>
 </section>
