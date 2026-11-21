@@ -238,6 +238,45 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
 .dls b{color:var(--tx)}
 .dlc .dlnote{margin:22px 0 0;font-size:14px;color:var(--mut);line-height:1.6}
 @media(max-width:900px){.dlg{grid-template-columns:1fr}}
+/* planes */
+.plans{background:linear-gradient(180deg,var(--bg),var(--bg2) 50%,var(--bg))}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.plan{--ac:var(--p);display:flex;flex-direction:column;padding:28px 24px}
+.plan.pop{border-color:#7C5CFF;box-shadow:0 0 0 1px #7C5CFF,0 30px 70px -30px #7C5CFF;transform:translateY(-10px)}
+.plan.pop:hover{transform:translateY(-16px)}
+.plan .badge{position:absolute;top:18px;right:18px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;background:linear-gradient(135deg,#7C5CFF,#A06BFF);color:#fff}
+.plan .badge.tr{background:#34E58B22;color:#7DF0B4;border:1px solid #34E58B55}
+.plan h3{margin:0 0 6px;font-size:22px}
+.plan .pd{color:var(--mut);font-size:14px;line-height:1.55;margin:0 0 18px;min-height:44px}
+.plan .pp{font-size:38px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.plan .pp small{font-size:15px;font-weight:600;color:var(--mut);letter-spacing:0;margin-left:4px}
+.plan .pn{font-size:13px;color:var(--mut);margin:8px 0 20px}
+.plan ul{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px;flex:1;align-content:start}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.45;color:#DDD3EE}
+.plan li::before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;background:#7C5CFF33;color:var(--p2);display:grid;place-items:center;font-size:11px;font-weight:800;margin-top:1px}
+.plan li.no{color:#6F6487}
+.plan li.no::before{content:"🔒";background:transparent;font-size:12px}
+.plan .btn{width:100%;justify-content:center}
+.plan details{margin:16px 0 0;background:#ffffff06;border-radius:12px}
+.plan summary{padding:12px 14px;font-size:14px}
+.plan summary::after{font-size:20px}
+.plan details p{padding:0 14px 14px;font-size:13.5px;line-height:1.6}
+.ptbl{margin-top:56px;overflow-x:auto;border:1px solid var(--line);border-radius:20px;background:#130C24}
+.ptbl table{width:100%;border-collapse:collapse;min-width:720px;font-size:14.5px}
+.ptbl th,.ptbl td{padding:14px 18px;text-align:center;border-bottom:1px solid var(--line)}
+.ptbl th:first-child,.ptbl td:first-child{text-align:left;color:#DDD3EE}
+.ptbl thead th{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--p2);background:#ffffff05}
+.ptbl tbody tr:last-child td{border-bottom:0}
+.ptbl td{color:var(--mut)}
+.ptbl .y{color:#7DF0B4;font-weight:800}
+.ptbl .n{color:#5A4F70}
+.ptbl .hc{background:#7C5CFF10}
+.pfoot{text-align:center;color:var(--mut);font-size:14px;margin-top:22px;line-height:1.6}
+.trial{display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:#34E58B1a;border:1px solid #34E58B55;color:#7DF0B4}
+.trialbox{margin:0 0 22px;padding:14px 16px;border-radius:12px;background:#FFC53D12;border:1px solid #FFC53D44;color:#F3DFA8;font-size:14.5px;line-height:1.6}
+.trialbox a{color:#FFC53D;font-weight:700;text-decoration:underline}
+@media(max-width:1100px){.pg{grid-template-columns:repeat(2,1fr)}.plan.pop{transform:none}}
+@media(max-width:640px){.pg{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -253,6 +292,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#funciones">Funciones</a>
       <a href="#kit">El kit</a>
+      <a href="#planes">Planes</a>
       <a href="#descargar">Descargar</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#comprar" class="btn sm">Comprar ahora</a>
@@ -269,7 +309,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
       <p class="lead hl" style="--d:.25s">SENZIO conecta sensores en tu hogar con una app que te muestra el consumo de luz, agua y gas, cuánto te cuesta cada servicio y te avisa al instante si hay una fuga.</p>
       <div class="cta hl" style="--d:.4s">
         <a href="#comprar" class="btn">Comprar el kit →</a>
-        <a href="#como-funciona" class="btn ghost">Ver cómo funciona</a>
+        <a href="#planes" class="btn ghost">Ver planes</a>
       </div>
       <div class="stats hl" style="--d:.55s">
         <div><b><span class="cnt" data-to="3">0</span></b><span>servicios en una pantalla</span></div>
@@ -443,7 +483,7 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <li><span>⚡</span>Sensor de corriente SCT-013 para la luz</li>
         <li><span>💧</span>Sensor de flujo YF-S201 para el agua</li>
         <li><span>🔥</span>Sensor de gas MQ-4</li>
-        <li><span>📱</span>Acceso a la app SENZIO con todas sus funciones</li>
+        <li><span>📱</span>Acceso a la app SENZIO según el plan mensual que elijas</li>
       </ul>
     </div>
     <div class="box rv" id="comprar" style="--d:.15s">
@@ -455,32 +495,139 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
         <button class="btn" style="width:100%;justify-content:center" onclick="var i=document.querySelector('#f input');if(i.checkValidity()){document.getElementById('ok').style.display='block'}else{i.reportValidity()}">Comprar ahora</button>
       </form>
       <div class="ok" id="ok">¡Gracias! Esta página es una demostración: el pedido aún no se procesa.</div>
-      <p class="note" style="margin:20px 0 0">¿Quieres probarla antes? La app trae un modo Simulado que funciona sin sensores.</p>
+      <p class="note" style="margin:20px 0 0">¿Quieres probarla antes? <a href="#descargar" style="color:var(--p2);text-decoration:underline">Descarga la versión de prueba gratis</a>: trae el modo Simulado, que funciona sin sensores. Luego elige un <a href="#planes" style="color:var(--p2);text-decoration:underline">plan mensual</a>.</p>
     </div>
+  </div>
+</section>
+
+<section id="planes" class="plans">
+  <div class="wrap">
+    <div class="eyebrow rv" style="text-align:center">Planes mensuales</div>
+    <h2 class="rv" style="text-align:center;margin-bottom:14px">Elige cuánto de SENZIO necesitas</h2>
+    <p class="sub rv" style="text-align:center;margin:0 auto 50px">Empieza gratis con la versión de prueba. Cuando instales el kit, elige un plan mensual: entre más completo el plan, más funciones de la app desbloqueas.</p>
+    <div class="pg">
+      <div class="card plan rv" style="--d:0.0s">
+        <span class="badge tr">Versión de prueba</span>
+        <h3>Prueba</h3>
+        <p class="pd">La versión que descargas. Conoce la app sin sensores y sin pagar.</p>
+        <div class="pp">$0<small></small></div>
+        <div class="pn">Gratis · sin tarjeta · sin cuenta para descargar</div>
+        <ul>
+          <li>Panel de luz, agua y gas</li>
+          <li>Modo Simulado: fugas de agua, de gas y picos eléctricos</li>
+          <li>Guía de uso integrada</li>
+          <li>Modo claro u oscuro</li>
+          <li class="no">Conexión Bluetooth con la placa ESP32</li>
+          <li class="no">Alertas de fuga con tus sensores reales</li>
+          <li class="no">Costo por servicio</li>
+          <li class="no">Control de relés</li>
+          <li class="no">Varias cuentas y descarga del historial</li>
+        </ul>
+        <a class="btn ghost" href="#descargar">Descargar versión de prueba</a>
+        <details><summary>Más detalles</summary><p>Es la misma app SENZIO v3.3 con las funciones del modo Simulado. Las lecturas son generadas por la app, no por sensores, así que sirve para conocerla antes de comprar el kit.</p></details>
+      </div>
+      <div class="card plan rv" style="--d:0.1s">
+        
+        <h3>Básico</h3>
+        <p class="pd">Para empezar a medir tu casa con los sensores reales.</p>
+        <div class="pp">$12.900<small>/mes</small></div>
+        <div class="pn">COP · se renueva cada mes · cancela cuando quieras</div>
+        <ul>
+          <li>Todo lo de Prueba</li>
+          <li>Modo Hardware: conexión Bluetooth con la ESP32</li>
+          <li>Lecturas en tiempo real: kW y kWh, L/min y litros, ppm</li>
+          <li>Alertas críticas: agua sobre 18 L/min y gas sobre 300 ppm</li>
+          <li>Costo por servicio</li>
+          <li>1 cuenta con acceso en 2 pasos</li>
+          <li class="no">Gasto total y comparativa de costos</li>
+          <li class="no">Control de relés</li>
+          <li class="no">Varias cuentas y descarga del historial</li>
+        </ul>
+        <a class="btn ghost" href="#comprar">Elegir Básico</a>
+        <details><summary>Más detalles</summary><p>Ideal para un apartamento o una sola persona. Ves el consumo de cada servicio y la app te avisa si detecta una fuga.</p></details>
+      </div>
+      <div class="card plan pop rv" style="--d:0.2s">
+        <span class="badge">Más elegido</span>
+        <h3>Hogar</h3>
+        <p class="pd">Control completo de los servicios para toda la familia.</p>
+        <div class="pp">$22.900<small>/mes</small></div>
+        <div class="pn">COP · se renueva cada mes · cancela cuando quieras</div>
+        <ul>
+          <li>Todo lo de Básico</li>
+          <li>Gasto total del hogar y comparativa de costos</li>
+          <li>Control de relés: luces, válvula de agua y turbinas</li>
+          <li>Hasta 4 cuentas con roles y permisos por sección</li>
+          <li>Tarjeta Mi Hogar con nombre y foto de tu casa</li>
+          <li>Descarga del historial en CSV o JSON (hasta 500 registros)</li>
+          <li class="no">Cuentas ilimitadas</li>
+          <li class="no">Soporte prioritario e instalación asistida</li>
+        </ul>
+        <a class="btn" href="#comprar">Elegir Hogar</a>
+        <details><summary>Más detalles</summary><p>Puedes cerrar la válvula de agua desde la app cuando hay una fuga, y cada persona de la casa entra con su propia cuenta y ve solo las secciones que su rol permite.</p></details>
+      </div>
+      <div class="card plan rv" style="--d:0.3s">
+        
+        <h3>Pro</h3>
+        <p class="pd">Para casas grandes, negocios pequeños o propiedades en arriendo.</p>
+        <div class="pp">$34.900<small>/mes</small></div>
+        <div class="pn">COP · se renueva cada mes · cancela cuando quieras</div>
+        <ul>
+          <li>Todo lo de Hogar</li>
+          <li>Cuentas ilimitadas con roles y permisos</li>
+          <li>Instalación asistida y calibración de los sensores</li>
+          <li>Soporte prioritario por WhatsApp</li>
+          <li>Revisión mensual de tu consumo con recomendaciones de ahorro</li>
+        </ul>
+        <a class="btn ghost" href="#comprar">Elegir Pro</a>
+        <details><summary>Más detalles</summary><p>Incluye acompañamiento del equipo SENZIO para instalar y calibrar el kit, y una revisión de tu historial cada mes para encontrar dónde puedes ahorrar.</p></details>
+      </div>
+    </div>
+    <div class="ptbl rv">
+      <table>
+        <thead><tr><th>Función de la app</th><th>Prueba</th><th>Básico</th><th class="hc">Hogar</th><th>Pro</th></tr></thead>
+        <tbody>
+          <tr><td>Panel de luz, agua y gas</td><td><span class="y">✓</span></td><td><span class="y">✓</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Modo Simulado</td><td><span class="y">✓</span></td><td><span class="y">✓</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Conexión Bluetooth con ESP32 (sensores reales)</td><td><span class="n">—</span></td><td><span class="y">✓</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Alertas críticas de fuga</td><td>Solo simuladas</td><td><span class="y">✓</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Costo por servicio</td><td><span class="n">—</span></td><td><span class="y">✓</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Gasto total y comparativa de costos</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Control de relés (luces, válvula, turbinas)</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td class="hc"><span class="y">✓</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td>Cuentas con roles y permisos</td><td>1</td><td>1</td><td class="hc">Hasta 4</td><td>Ilimitadas</td></tr>
+          <tr><td>Descarga del historial CSV / JSON</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td class="hc">500 registros</td><td>500 registros</td></tr>
+          <tr><td>Instalación asistida y soporte prioritario</td><td><span class="n">—</span></td><td><span class="n">—</span></td><td class="hc"><span class="n">—</span></td><td><span class="y">✓</span></td></tr>
+          <tr><td><b>Precio mensual</b></td><td><b>$0</b></td><td><b>$12.900</b></td><td class="hc"><b>$22.900</b></td><td><b>$34.900</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="pfoot rv">Precios en pesos colombianos (COP), IVA incluido. El kit de sensores se compra aparte. Puedes subir o bajar de plan cuando quieras.</p>
   </div>
 </section>
 
 <section id="descargar" class="dl">
   <div class="wrap">
     <div class="eyebrow rv" style="text-align:center">Descarga</div>
-    <h2 class="rv" style="text-align:center;margin-bottom:14px">Descarga la app SENZIO</h2>
-    <p class="sub rv" style="text-align:center;margin:0 auto 40px">Instala la versión 3.3 en tu computador y empieza a ver tu consumo de luz, agua y gas. No necesitas crear una cuenta para descargarla.</p>
+    <h2 class="rv" style="text-align:center;margin-bottom:14px">Descarga la versión de prueba de SENZIO</h2>
+    <p class="sub rv" style="text-align:center;margin:0 auto 40px">Lo que descargas aquí es la <b style="color:var(--tx)">versión de prueba gratuita</b> de SENZIO v3.3: funciona en modo Simulado para que conozcas la app sin sensores. No necesitas crear una cuenta para descargarla.</p>
     <div class="dlg">
       <div class="card dlc rv">
-        <h3><i>⬇️</i>SENZIO v3.3 para tu computador</h3>
-        <div class="dlm"><span>Archivo único .html</span><span>318 KB</span><span>Windows · Mac · Linux</span></div>
+        <span class="trial">● Versión de prueba</span>
+        <h3><i>⬇️</i>SENZIO v3.3 de prueba para tu computador</h3>
+        <div class="dlm"><span>Versión de prueba · Gratis</span><span>Archivo único .html</span><span>318 KB</span><span>Windows · Mac · Linux</span></div>
         <ol class="dls">
           <li><span><b>Descarga el archivo.</b> Pulsa el botón y guarda <b>SENZIO-v3.3.html</b> en tu equipo.</span></li>
           <li><span><b>Ábrelo con Chrome o Edge.</b> Haz doble clic sobre el archivo y se abre la app.</span></li>
-          <li><span><b>Elige cómo usarla.</b> Prueba el modo Simulado sin sensores, o conecta tu placa ESP32 por Bluetooth.</span></li>
+          <li><span><b>Pruébala en modo Simulado.</b> Genera fugas de agua, de gas y picos eléctricos para ver cómo responde la app.</span></li>
         </ol>
-        <a class="btn" href="SENZIO-v3.3.html" download="SENZIO-v3.3.html" style="margin-top:8px">⬇ Descargar SENZIO v3.3</a>
-        <p class="dlnote">La primera vez necesita conexión a internet para cargar las fuentes y las gráficas. Para conectar la placa por Bluetooth usa Google Chrome o Microsoft Edge.</p>
+        <div class="trialbox">Esta descarga es la <b>versión de prueba</b>. Para conectar tus sensores por Bluetooth, controlar los relés y desbloquear el resto de funciones, elige un <a href="#planes">plan mensual</a>.</div>
+        <a class="btn" href="SENZIO-v3.3.html" download="SENZIO-v3.3.html" style="margin-top:8px">⬇ Descargar versión de prueba</a>
+        <p class="dlnote">La primera vez necesita conexión a internet para cargar las fuentes y las gráficas. Cuando tengas un plan, para conectar la placa por Bluetooth usa Google Chrome o Microsoft Edge.</p>
       </div>
       <div class="card dlc rv" style="--d:.15s;--ac:var(--agua)">
         <h3><i>🌐</i>¿Prefieres no descargar?</h3>
-        <p>Abre la app directamente en tu navegador, sin instalar nada. Es la misma versión 3.3.</p>
-        <a class="btn ghost" href="app/" target="_blank" rel="noopener">Abrir la app en línea →</a>
+        <span class="trial">● Versión de prueba</span>
+        <p>Abre la app directamente en tu navegador, sin instalar nada. Es la misma versión de prueba 3.3.</p>
+        <a class="btn ghost" href="app/" target="_blank" rel="noopener">Probar la app en línea →</a>
         <p class="dlnote">Sugerencia: si es tu primera vez, activa el modo Simulado para conocer todas las funciones antes de instalar los sensores.</p>
       </div>
     </div>
@@ -492,11 +639,13 @@ input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;bac
     <div class="eyebrow rv" style="text-align:center">FAQ</div>
     <h2 class="rv" style="text-align:center;margin-bottom:50px">Preguntas frecuentes</h2>
     <div class="faq">
-      <details class="rv"><summary>¿Puedo usar la app sin comprar los sensores?</summary><p>Sí. Con el modo Simulado la app genera lecturas de prueba para que conozcas todas las funciones antes de instalar el kit.</p></details>
+      <details class="rv"><summary>¿Puedo usar la app sin comprar los sensores?</summary><p>Sí. La versión que se descarga es la versión de prueba gratuita: con el modo Simulado la app genera lecturas de prueba para que la conozcas antes de instalar el kit.</p></details>
+      <details class="rv"><summary>¿Qué diferencia hay entre la versión de prueba y los planes?</summary><p>La versión de prueba solo funciona en modo Simulado. Con un plan mensual conectas tus sensores reales por Bluetooth y desbloqueas más funciones: Básico ($12.900/mes) agrega alertas reales y costo por servicio; Hogar ($22.900/mes) agrega control de relés, comparativa de costos, hasta 4 cuentas y descarga del historial; Pro ($34.900/mes) agrega cuentas ilimitadas, instalación asistida y soporte prioritario.</p></details>
+      <details class="rv"><summary>¿Puedo cambiar o cancelar mi plan?</summary><p>Sí. Los planes se pagan mes a mes: puedes subir, bajar o cancelar tu plan cuando quieras.</p></details>
       <details class="rv"><summary>¿Qué navegador necesito?</summary><p>Para conectar la placa por Bluetooth necesitas Google Chrome o Microsoft Edge, que son compatibles con Web Bluetooth.</p></details>
       <details class="rv"><summary>¿Qué pasa si hay una fuga?</summary><p>La app muestra una alerta crítica cuando el agua supera 18 L/min o el gas pasa de 300 ppm, y la guarda en la actividad reciente.</p></details>
       <details class="rv"><summary>¿Puedo descargar mis datos?</summary><p>Sí. Puedes descargar tu historial de lecturas en CSV, que abre en Excel, o en JSON.</p></details>
-      <details class="rv"><summary>¿Pueden usarla varias personas de la casa?</summary><p>Sí. Cada persona crea su cuenta con un rol, y cada rol tiene permisos para ver ciertas secciones.</p></details>
+      <details class="rv"><summary>¿Pueden usarla varias personas de la casa?</summary><p>Sí, desde el plan Hogar (hasta 4 cuentas) o Pro (ilimitadas). Cada persona crea su cuenta con un rol, y cada rol tiene permisos para ver ciertas secciones.</p></details>
     </div>
   </div>
 </section>
